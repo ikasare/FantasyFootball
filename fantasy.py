@@ -47,4 +47,6 @@ def get_stats_for_game():
                  'Dribbles Won': response.get('dribblesWon', 0),
                  'Goals': response.get('goals', 0)}
         print(stats)
+
+
 get_stats_for_game()
