@@ -34,7 +34,7 @@ def get_stats_for_game():
         df = pd.DataFrame(columns=col_names)
         
         exit = ""
-        while exit != 'Q':
+        while exit.upper() != 'Q':
             team1 = input('Please enter the home team: ')# 'Chelsea' 
             team2 = input('Please enter the away team: ') #'Arsenal' 
             player = input("Please enter the midfielder's name: ") #'Mason Mount' 
@@ -70,7 +70,11 @@ def loaddb():
     os.system('mysql -u root -pcodio -e "CREATE DATABASE IF NOT EXISTS ' +
               'Premier_League' + ';"')
     os.system("mysql -u root -pcodio Premier_League < epl.sql")
+    
+def loadDataset(update=False):
+    loaddb('epl.sql', 'Premier_League')
+    df = pd.read_sql_table('Midfielders', con=createEngine('Premier_League'))
 
-createdb()
-savedb()
+# createdb()
+# savedb()
                   

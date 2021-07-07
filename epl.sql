@@ -39,7 +39,7 @@ CREATE TABLE `Midfielders` (
 
 LOCK TABLES `Midfielders` WRITE;
 /*!40000 ALTER TABLE `Midfielders` DISABLE KEYS */;
-INSERT INTO `Midfielders` VALUES ('Declan Rice',58,50,1,0,'Chelsea','West Ham');
+INSERT INTO `Midfielders` VALUES ('Mason Mount',76,44,1,0,'Arsenal','Chelsea');
 /*!40000 ALTER TABLE `Midfielders` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -52,4 +52,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-07-06 19:28:17
+-- Dump completed on 2021-07-07 16:32:20
