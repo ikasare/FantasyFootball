@@ -55,7 +55,7 @@ def get_stats_for_game():
         team1 = 'Chelsea'  # input('Please enter the home team: ') # 'Chelsea'
         team2 = 'Arsenal'  # input('Please enter the away team: ') # 'Arsenal'
         while int(amount) > 0:
-            player = 'Mason Mount'  # input("Please enter the midfielder's name: ") #'Mason Mount' 
+            player = 'Mason Mount'  # input("Please enter the midfielder's name: ") #'Mason Mount'
             querystring = {'team1': team1, 'team2': team2, 'player': player}
             headers = {
                 'x-rapidapi-key': "d1d4b18bb8mshb6f0f40d2cc89ddp13206bjsnaa6185b9070d",
@@ -72,7 +72,7 @@ def get_stats_for_game():
                          'Passes Completed': response.get('passesSuccessful', 0),
                          'Dribbles Won': response.get('dribblesWon', 0),
                          'Goals': response.get('goals', 0),
-                         'Assists': response.get('assists',0)}
+                         'Assists': response.get('assists', 0)}
                 df.loc[len(df.index)] = [stats['Player Name'], stats['Touches'], stats['Passes Completed'],
                                          stats['Dribbles Won'], stats['Goals'], stats['Assists'], team1, team2]
                 amount = int(amount)
@@ -87,7 +87,7 @@ def createdb():
     os.system('mysql -u root -pcodio -e "CREATE DATABASE IF NOT EXISTS ' + 'Premier_League' + ';"')
     engine = create_engine('mysql://root:codio@localhost/Premier_League')
     df.to_sql('Midfielders', con=engine, if_exists='replace', index=False)
-        
+
 
 def savedb():
     os.system("mysqldump -u root -pcodio Premier_League > epl.sql")
@@ -97,14 +97,14 @@ def loaddb():
     os.system('mysql -u root -pcodio -e "CREATE DATABASE IF NOT EXISTS ' +
               'Premier_League' + ';"')
     os.system("mysql -u root -pcodio Premier_League < epl.sql")
-    
+
 
 def loadDataset(update=False):
     engine = create_engine('mysql://root:codio@localhost/Premier_League')
     loaddb()
     df = pd.read_sql_table('Midfielders', con=engine)
     return df
-  
+
 
 if __name__ == '__main__': 
     get_team_midfielders()
