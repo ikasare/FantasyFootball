@@ -25,6 +25,7 @@ def get_team_midfielders():
             if 'Midfield' in player['position']:
                 player.pop('active')
                 print(player)
+        teams = int(teams)
         teams -= 1
     return response
 
