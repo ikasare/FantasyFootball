@@ -51,10 +51,10 @@ def get_stats_for_game():
             if not amount.isdigit():
                 print('Please enter the number of midfielders you would like to analyze from a match: ')
                 get_stats_for_game()
-            team1 = input('Please enter the home team: ')# 'Chelsea' 
-            team2 = input('Please enter the away team: ') #'Arsenal' 
+            team1 =  'Chelsea' #input('Please enter the home team: ')# 'Chelsea' 
+            team2 = 'Arsenal' #input('Please enter the away team: ') #'Arsenal' 
             while int(amount) > 0:       
-                player = input("Please enter the midfielder's name: ") #'Mason Mount' 
+                player = 'Mason Mount' #input("Please enter the midfielder's name: ") #'Mason Mount' 
                 querystring = {'team1': team1, 'team2': team2, 'player': player}
                 headers = {
                     'x-rapidapi-key': "d1d4b18bb8mshb6f0f40d2cc89ddp13206bjsnaa6185b9070d",
@@ -101,9 +101,11 @@ def loadDataset(update=False):
     df = pd.read_sql_table('Midfielders', con=engine)
     return df
   
-if __name__ == '__main__':  
-    get_stats_for_game()
+if __name__ == '__main__': 
     get_team_midfielders()
+    createdb()
+    savedb()
+    
 
 
 
