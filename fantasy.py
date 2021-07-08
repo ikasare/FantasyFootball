@@ -15,7 +15,8 @@ def get_team_midfielders():
         get_team_midfielders()
     else:
         while int(teams) > 0:
-            url = "https://heisenbug-premier-league-live-scores-v1.p.rapidapi.com/api/premierleague/players"
+            a = "https://heisenbug-premier-league-live-scores-v1."
+            b = "p.rapidapi.com/api/premierleague/players"
 
             querystring = {"team": input('Please enter a team whose midfielders you want to see: ')}
 
@@ -24,7 +25,7 @@ def get_team_midfielders():
                 'x-rapidapi-host': "heisenbug-premier-league-live-scores-v1.p.rapidapi.com"
                 }
 
-            response = requests.request("GET", url, headers=headers, params=querystring)
+            response = requests.request("GET", url=a+b, headers=headers, params=querystring)
             if 'error' in response.text:
                 print('Enter the correct team name')
                 get_team_midfielders()
@@ -42,7 +43,8 @@ def get_team_midfielders():
 
 def get_stats_for_game():
     url = "https://heisenbug-premier-league-live-scores-v1.p.rapidapi.com/api/premierleague/match/player"
-    col_names = ['Player Name', 'Touches', 'Passes Completed', 'Dribbles Won', 'Goals', 'Assists', 'Home Team', 'Away Team']
+    col_names = ['Player Name', 'Touches', 'Passes Completed', 'Dribbles Won', 
+                 'Goals', 'Assists', 'Home Team', 'Away Team']
     df = pd.DataFrame(columns=col_names)
 
     exit = ""

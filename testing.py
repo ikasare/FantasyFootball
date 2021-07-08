@@ -1,5 +1,5 @@
 import unittest
-import pandas 
+import pandas
 
 from fantasy import get_team_midfielders, get_stats_for_game
 
