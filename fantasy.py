@@ -101,9 +101,11 @@ def loadDataset(update=False):
     df = pd.read_sql_table('Midfielders', con=engine)
     return df
   
-if __name__ == '__main__':  
-    get_stats_for_game()
+if __name__ == '__main__': 
     get_team_midfielders()
+    createdb()
+    savedb()
+    
 
 
 
