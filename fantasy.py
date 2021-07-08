@@ -77,7 +77,7 @@ def get_stats_for_game():
                                          stats['Dribbles Won'], stats['Goals'], stats['Assists'], team1, team2]
                 amount = int(amount)
                 amount -= 1
-        exit = input('Enter Q to exit, or C to choose different match: ')        
+        exit = input('Enter Q to exit, or C to choose different match: ')
     print(df)
     return df
 

@@ -5,7 +5,7 @@ from fantasy import get_team_midfielders, get_stats_for_game
 
 
 class TestFileName(unittest.TestCase):
-        
+
     def test_get_team_midfielders(self):
         test = get_team_midfielders()
         # Test is our function returns a list of midfielders 
