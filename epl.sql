@@ -28,6 +28,7 @@ CREATE TABLE `Midfielders` (
   `Passes Completed` bigint(20) DEFAULT NULL,
   `Dribbles Won` bigint(20) DEFAULT NULL,
   `Goals` bigint(20) DEFAULT NULL,
+  `Assists` bigint(20) DEFAULT NULL,
   `Home Team` text DEFAULT NULL,
   `Away Team` text DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -39,7 +40,7 @@ CREATE TABLE `Midfielders` (
 
 LOCK TABLES `Midfielders` WRITE;
 /*!40000 ALTER TABLE `Midfielders` DISABLE KEYS */;
-INSERT INTO `Midfielders` VALUES ('Declan Rice',58,50,1,0,'Chelsea','West Ham');
+INSERT INTO `Midfielders` VALUES ('Christian Pulisic',59,34,1,0,0,'Chelsea','Arsenal'),('Hakim Ziyech',15,10,0,0,0,'Chelsea','Arsenal'),('Bukayo Saka',28,11,0,0,0,'Chelsea','Arsenal'),('Dani Ceballos',0,0,0,0,0,'Chelsea','Arsenal');
 /*!40000 ALTER TABLE `Midfielders` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -52,4 +53,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-07-06 19:28:17
+-- Dump completed on 2021-07-08  2:07:31
