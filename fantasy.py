@@ -106,7 +106,7 @@ def loadDataset(update=False):
     return df
 
 
-if __name__ == '__main__': 
+if __name__ == '__main__':
     get_team_midfielders()
     createdb()
     savedb()

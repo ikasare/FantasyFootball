@@ -19,7 +19,7 @@ class TestFileName(unittest.TestCase):
         self.assertTrue(type(test) is pandas.core.frame.DataFrame)
         # Make sure there is data in our dataFrame
         self.assertFalse(test.empty)
-        
+
 
 if __name__ == '__main__':
     unittest.main()
