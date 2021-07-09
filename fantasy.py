@@ -36,7 +36,7 @@ def get_team_midfielders():
                     if 'Midfield' in player['position']:
                         print(player['playerName'])
                 teams = int(teams)
-                print("\n")
+                print('\n')
                 teams -= 1
     return test
 
@@ -49,18 +49,14 @@ def get_stats_for_game():
     exit = ""
     match = ""
     while exit.upper() != 'Q':
-        get_team_midfielders()
-        print("\n")
         amount = input("How many midfileders would you like to choose from this match: ")
         if not amount.isdigit():
             print('Please enter the number of midfielders you would like to analyze from a match: ')
             get_stats_for_game()
-        team1 = input('Please enter the home team: ') # 'Chelsea'
-        team2 = input('Please enter the away team: ') # 'Arsenal'
-        print("\n")
+        team1 = input('Please enter the home team: ')
+        team2 = input('Please enter the away team: ')
         while int(amount) > 0:
-            player = input("Please enter the midfielder's name: ") #'Mason Mount'
-            print("\n")
+            player = input("Please enter the midfielder's name: ")
             querystring = {'team1': team1, 'team2': team2, 'player': player}
             headers = {
                 'x-rapidapi-key': "d1d4b18bb8mshb6f0f40d2cc89ddp13206bjsnaa6185b9070d",
@@ -83,7 +79,6 @@ def get_stats_for_game():
                 amount = int(amount)
                 amount -= 1
         exit = input('Enter Q to exit, or C to choose different match: ')
-        print("\n")
     print(df)
     return df
 
@@ -113,5 +108,6 @@ def loadDataset(update=False):
 
 
 if __name__ == '__main__':
+    get_team_midfielders()
     createdb()
     savedb()
