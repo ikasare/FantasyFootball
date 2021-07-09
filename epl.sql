@@ -40,7 +40,7 @@ CREATE TABLE `Midfielders` (
 
 LOCK TABLES `Midfielders` WRITE;
 /*!40000 ALTER TABLE `Midfielders` DISABLE KEYS */;
-INSERT INTO `Midfielders` VALUES ('Christian Pulisic',43,21,0,2,0,'Crystal Palace','Chelsea'),('Mason Mount',93,58,2,0,1,'Crystal Palace','Chelsea'),('Kai Havertz',54,32,1,1,1,'Crystal Palace','Chelsea'),('Pablo Fornals',52,27,0,2,0,'West Ham','Southampton'),('Declan Rice',48,26,2,1,0,'West Ham','Southampton');
+INSERT INTO `Midfielders` VALUES ('Mason Mount',93,58,2,0,1,'Crystal Palace','Chelsea'),('Christian Pulisic',43,21,0,2,0,'Crystal Palace','Chelsea'),('Kai Havertz',54,32,1,1,1,'Crystal Palace','Chelsea');
 /*!40000 ALTER TABLE `Midfielders` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -53,4 +53,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-07-09  1:01:19
+-- Dump completed on 2021-07-09  5:39:54

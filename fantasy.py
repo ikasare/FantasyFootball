@@ -50,7 +50,6 @@ def get_stats_for_game():
     match = ""
     while exit.upper() != 'Q':
         get_team_midfielders()
-        print('\n')
         amount = input("How many midfileders would you like to choose from this match: ")
         if not amount.isdigit():
             print('Please enter the number of midfielders you would like to analyze from a match: ')
